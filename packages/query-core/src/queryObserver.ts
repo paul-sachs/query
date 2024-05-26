@@ -575,6 +575,8 @@ export class QueryObserver<
       isRefetchError: isError && hasData,
       isStale: isStale(query, options),
       refetch: this.refetch,
+      // TODO: Fix type before shipping
+      promise: this.#currentQuery.promise as any,
     }
 
     return result as QueryObserverResult<TData, TError>

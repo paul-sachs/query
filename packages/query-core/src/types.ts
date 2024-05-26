@@ -641,6 +641,7 @@ export interface QueryObserverBaseResult<
    * - See [Network Mode](https://tanstack.com/query/latest/docs/framework/react/guides/network-mode) for more information.
    */
   fetchStatus: FetchStatus
+  promise: Promise<TData> | undefined
 }
 
 export interface QueryObserverPendingResult<

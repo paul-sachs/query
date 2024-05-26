@@ -182,6 +182,10 @@ export class Query<
     return this.options.meta
   }
 
+  get promise(): Promise<TData> | undefined {
+    return this.#retryer?.promise
+  }
+
   setOptions(
     options?: QueryOptions<TQueryFnData, TError, TData, TQueryKey>,
   ): void {
